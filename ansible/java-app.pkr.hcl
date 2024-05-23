@@ -1,3 +1,11 @@
+packer {
+  required_plugins {
+    ansible = {
+      version = ">= 1.0.0"
+      source  = "github.com/hashicorp/ansible"
+    }
+  }
+}
 variable "ami_id" {
   type    = string
   default = "ami-0e001c9271cf7f3b9"
