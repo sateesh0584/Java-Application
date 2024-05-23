@@ -1,5 +1,5 @@
 ---
-- name: Install Java
+- name: Install Java and deploy application
   hosts: all
   become: yes
   remote_user: ubuntu
@@ -12,5 +12,24 @@
       - start.sh
       - spring-petclinic-3.2.0-SNAPSHOT.jar
 
-  roles:
-    - java
+  tasks:
+    - name: Copy properties.py to the server
+      copy:
+        src: "{{ source_dir }}/properties.py"
+        dest: "{{ dest_dir }}/properties.py"
+
+    - name: Copy start.sh to the server
+      copy:
+        src: "{{ source_dir }}/start.sh"
+        dest: "{{ dest_dir }}/start.sh"
+        mode: '0755'
+
+    - name: Copy spring-petclinic-3.2.0-SNAPSHOT.jar to the server
+      copy:
+        src: "{{ source_dir }}/spring-petclinic-3.2.0-SNAPSHOT.jar"
+        dest: "{{ dest_dir }}/spring-petclinic-3.2.0-SNAPSHOT.jar"
+
+    - name: Copy application.properties to the server
+      copy:
+        src: "{{ source_dir }}/application.properties"
+        dest: "{{ dest_dir }}/application.properties"
