@@ -1,6 +1,6 @@
 variable "ami_id" {
   type    = string
-  default = "ami-03f65b8614a860c29"
+  default = "ami-0e001c9271cf7f3b9"
 }
 
 locals {
@@ -10,7 +10,7 @@ locals {
 source "amazon-ebs" "java-app" {
   ami_name      = "PACKER-${local.app_name}"
   instance_type = "t2.medium"
-  region        = "us-west-2"
+  region        = "us-east-1"
   source_ami    = "${var.ami_id}"
   ssh_username  = "ubuntu"
   tags = {
