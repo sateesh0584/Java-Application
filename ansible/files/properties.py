@@ -1,7 +1,7 @@
 import boto3
 import json
 
-region = 'us-west-2'
+region = 'us-east-1'
 parameter_store = '/dev/petclinic/rds_endpoint'
 secret_name_tag = 'dev-rds-db'
 file_path = "/opt/application.properties"
