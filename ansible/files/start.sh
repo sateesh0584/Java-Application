@@ -1,6 +1,6 @@
 #!/bin/bash
 
-JAR_FILE=/home/ubuntu/pet-clinic-1.0.1.jar
+JAR_FILE=/home/ubuntu/spring-petclinic/target/spring-petclinic-3.2.0-SNAPSHOT.jar
 APP_PROPERTIES=/opt/application.properties
 PROPERTIES_SCRIPT=/home/ubuntu/properties.py
 
