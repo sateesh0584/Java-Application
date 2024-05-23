@@ -1,7 +1,7 @@
 #Network
-region  = "us-west-2"
-vpc_id  = "vpc-0a5ca4a92c2e10163"
-subnets = ["subnet-058a7514ba8adbb07", "subnet-032f5077729435858", "subnet-0dbcd1ac168414927"]
+region  = "us-east-1"
+vpc_id  = "vpc-0bfef430f473a07bf"
+subnets = ["subnet-01cb6d1af12682c13", "subnet-020a2f62fcc3ec32e", "subnet-0caf0db80b3d01abd"]
 
 #alb_sg
 ingress_alb_from_port   = 80
@@ -54,7 +54,7 @@ listener_protocol = "HTTP"
 listener_type     = "forward"
 
 #launch_template
-ami_id               = "ami-0f7a74cccd5a223bc"
+ami_id               = "ami-0e001c9271cf7f3b9"
 instance_type        = "t2.medium"
 key_name             = "techiescamp"
 user_data            = <<-EOF
@@ -71,9 +71,9 @@ cost_center = "techiescamp-commerce"
 application = "pet-clinic"
 
 # Network Vars
-region              = "us-west-2"
-vpc_id              = "vpc-0a5ca4a92c2e10163"
-subnet_ids          = ["subnet-058a7514ba8adbb07", "subnet-032f5077729435858", "subnet-0dbcd1ac168414927"]
+region              = "us-east-1"
+vpc_id  = "vpc-0bfef430f473a07bf"
+subnets = ["subnet-01cb6d1af12682c13", "subnet-020a2f62fcc3ec32e", "subnet-0caf0db80b3d01abd"]
 multi_az            = false
 publicly_accessible = true
 
