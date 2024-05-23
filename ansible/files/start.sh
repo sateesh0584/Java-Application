@@ -1,7 +1,7 @@
 #!/bin/bash
 
-JAR_FILE=/home/ubuntu/spring-petclinic/target/spring-petclinic-3.2.0-SNAPSHOT.jar
-APP_PROPERTIES=/opt/application.properties
+JAR_FILE=/home/ubuntu/spring-petclinic-3.2.0-SNAPSHOT.jar
+APP_PROPERTIES=/home/ubuntu/application.properties
 PROPERTIES_SCRIPT=/home/ubuntu/properties.py
 
 sudo python3 ${PROPERTIES_SCRIPT}
