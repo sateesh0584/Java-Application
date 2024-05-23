@@ -4,7 +4,7 @@ import json
 region = 'us-east-1'
 parameter_store = '/dev/petclinic/rds_endpoint'
 secret_name_tag = 'dev-rds-db'
-file_path = "/opt/application.properties"
+file_path = "/home/ubuntu/application.properties"  # Update the file path
 
 ssm = boto3.client('ssm', region_name=region)
 
@@ -37,6 +37,5 @@ file_contents = file_contents.replace("spring.datasource.url=jdbc:mysql://localh
 file_contents = file_contents.replace("spring.datasource.username=petclinic", f"spring.datasource.username={secret_data['username']}")
 file_contents = file_contents.replace("spring.datasource.password=petclinic", f"spring.datasource.password={secret_data['password']}")
 
-
 with open(file_path, 'w') as f:
-        f.write(file_contents)
+    f.write(file_contents)
