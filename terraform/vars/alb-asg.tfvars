@@ -58,7 +58,7 @@ listener_type     = "forward"
 #launch_template
 ami_id               = "ami-0e001c9271cf7f3b9"
 instance_type        = "t2.medium"
-key_name             = "techiescamp"
+key_name             = "us-east"
 user_data            = <<-EOF
 #!/bin/bash
 bash /home/ubuntu/start.sh
