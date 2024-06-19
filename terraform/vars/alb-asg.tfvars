@@ -3,7 +3,7 @@
 #Network
 region              = "us-east-1"
 vpc_id              = "vpc-0bfef430f473a07bf"
-subnet_ids          = ["subnet-01cb6d1af12682c13", "subnet-020a2f62fcc3ec32e", "subnet-0caf0db80b3d01abd"]
+subnets          = ["subnet-01cb6d1af12682c13", "subnet-020a2f62fcc3ec32e", "subnet-0caf0db80b3d01abd"]
 
 #alb_sg
 ingress_alb_from_port   = 80
